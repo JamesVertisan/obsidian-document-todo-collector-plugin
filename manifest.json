@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-doc-todo-collector-plugin",
+	"name": "Superior TODO Collector",
+	"version": "1.0.3",
+	"minAppVersion": "0.15.0",
+	"description": "Collects all TODO items in a document and moves them under a dedicated #### heading at the bottom of the document. It's case-insensitive and supports #todo tags, bullets, and raw.",
+	"author": "James Vertisan",
+	"authorUrl": "https://vertisan.com",
+	"isDesktopOnly": false
+}
