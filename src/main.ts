@@ -122,12 +122,25 @@ export default class TodoCapture extends Plugin {
 	refreshIconRibbon = () => {
 		this.ribbonIcon?.remove();
 		if (this.settings.ribbonIcon) {
-			this.ribbonIcon = this.addRibbonIcon('vertisan-logo', 'TODO Collector', () => {
+			this.ribbonIcon = this.addRibbonIcon('vertisan-logo', 'Collect document TODOs', () => {
 				const ribbonCommand = this.settings.ribbonCommandUsesCode ? 'obsidian-doc-todo-collector-plugin' : 'obsidian-doc-todo-collector-plugin';
 				this[ribbonCommand]();
 			});
 		}
 	};
+
+	async collectTODOs()
+	{
+	  console.log('[TODO] Executing method collectTODOs...');
+	  let editor = app.workspace.getActiveViewOfType(MarkdownView)?.editor;
+ 
+	  if (editor == null) {
+		console.log('[TODO] Editor object is null.');
+		return;
+	  }
+	  this.extractTodosFromCurrentNote(editor, null);
+  
+	}
 }
 
 // Collect the values from the user on the Community Plugins settings

@@ -1,45 +1,54 @@
-# Document TODO Collector for Obsidian
+# Superior TODO Collector for Obsidian
 
-An Obsidian plugin that wrangles all lines starting with "TODO" in your notes and consolidates them under a unified "TODOs" section.
+This is an Obsidian plugin that identifies all "TODO" notations within a note, collects them all, and then relocates them to a consolidated heading at the bottom of the note.
 
 ## Features
 
-- Scan the current note for any lines starting with "TODO" or "- [] TODO" or "- TODO"
-- Automatically consolidate found "TODO" lines into a "TODOs" section at the end of the note.
-- One-click operation using the ribbon icon.
+- Scours the current markdown document (note) looking for any lines starting with the tag "#todo", "- TODO" or simply "TODO".
+- Identification of TODO line prefixes is case-insensitive.
+- Automatically consolidates all of the found "TODO" lines into a new heading at the bottom of the markdown document.
+- Simple one-click operation using the ribbon icon.
+- Settings configuration for the heading level, the heading text, and the core matching term.
+- Settings configuration to toggle the visibility of the ribbon icon.
 
-## Installation
+## Plugin Installation
 
-### From GitHub
+### Automatically from Within Obsidian
 
-1. Navigate to the releases section of the GitHub repository.
-2. Download the latest released `main.js`, `manifest.json`, `styles.css` from Releases.
-3. Create the `todo-wrangler` in your vault's plugins folder: `<vault>/.obsidian/plugins/`
-   - Note: If you don't have a plugins folder, create one inside the `.obsidian` directory.
-4. Reload Obsidian
-5. If everything was successful, you should see 'TODO Wrangler' in the list of installed plugins.
+The plugin is available in the web-based Obsidian Community Plugins collection, linked here:  [Superior TODO Collector](https://obsidian.md/plugins?search=Superior%20TODO%20Collector)
 
-### From Within Obsidian
+The plugin can also be installed within the Obsidian app by going to  **Settings > Community plugins**,  and searching for "Superior TODO Collector" by James Vertisan.
 
-The plugin is available in the Obsidian plugin library ([TODO Wrangler](https://obsidian.md/plugins?search=TODO%20Wrangler)). You can install
-the plugin directly from within Obsidian by going to be Settings > Community plugins and searching for "TODO Wrangler".
+### Manually from GitHub
 
-## Usage
+1. Navigate to the releases section of the GitHub repository
+2. Download the latest released `main.js` and `manifest.json` from Releases
+3. Create the `obsidian-doc-todo-collector-plugin` in your Vault's plugins folder: `<vault>/.obsidian/plugins/`
+4. Close and reload Obsidian
+5. You will see 'Superior TODO Collector' in the list of installed Community Plugins
 
-1. Open any note in Obsidian.
-2. Open the command palette (`CMD + p` on Mac OS X)
-3. Search and run "Wrangle Todos"
-4. All lines in your note starting with "TODO" will be extracted and placed under a "TODOs" section at the end of the note.
-   1. If you've changed the keyword in "Settings" then it will extract those.
-   2. There are multiple variations of "TODO" (or keyword) it can handle; for instance, lists "- TODO".
+## Using the Plugin
 
-## Contributing
+### Using from the Command Palette
+1. Open any note (markdown document) within Obsidian
+2. Open the command palette (`CMD + p` on a Mac or `Ctrl + p` on a PC)
+3. Search for and execute "Superior TODO Collector: Collect TODOs"
 
-If you have ideas or feedback for this plugin, please open an issue on GitHub. Pull requests are also welcome!
+### Using from the Ribbon
+1. Open any note (markdown document) within Obsidian
+2. Click or tap on the left-hand Ribbon icon that reads "TO DO". When you point to the icon, you will notice a tooltip pop up that reads "Collect document TODOs".
 
-## Acknowledgements
-Lots of gratitude to the Obsidian team for creating a phenomenal app and for making it easy for developers to build plugins. Thank you!!
+### The Results
+1. A new heading will be created, if it doesn't already exist, at the bottom of the open document. The heading will be "#### TODO Items collected from this document" by default. You can change the heading level and the heading text from the Community Plugins 'Settings' page.
+2. All lines in your markdown document (note) starting with "#ToDo", "TODO", or "-TODO" will be extracted from their current line number and placed under the newly created heading at the bottom of the document.
 
+## Issues and Feedback
+
+If you have ideas or feedback to help me improve this plugin, then please create a "New issue" in [this GitHub repository](https://github.com/JamesVertisan/obsidian-document-todo-collector-plugin/issues). It will be the green button on the right-hand side of the page.
+
+## Developer Credits
+
+This plugin was created by James Vertisan.
 
 ## License
 
