@@ -48,7 +48,7 @@ If you have ideas or feedback to help me improve this plugin, then please create
 
 ## Developer Credits
 
-This plugin was created by James Vertisan.
+This plugin was created by [James Vertisan](https://instagram.com/james.vertisan).
 
 ## License
 
